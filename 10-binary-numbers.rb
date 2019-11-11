@@ -3,13 +3,10 @@ require 'json'
 require 'stringio'
 
 n = gets.to_i
-counter = 0
+counter = 1
 max = 0
 n.to_s(2).each_char do |num|
-    if num == '1'
-        counter += 1
-    else
-        counter > max ? max = counter : counter = 0
-    end
+    counter > max && num == '1' ? max = counter : nil
+    num == '1' ? counter += 1 : counter = 1
 end
 puts max
