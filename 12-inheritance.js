@@ -45,10 +45,7 @@ class Student extends Person {
    */
   // Write your constructor here
   constructor(firstName, lastName, id, scores) {
-    super();
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.idNumber = id;
+    super(firstName, lastName, id);
     this.scores = scores;
   }
   /*
